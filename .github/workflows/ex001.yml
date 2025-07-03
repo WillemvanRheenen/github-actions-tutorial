@@ -1,1 +1,11 @@
-
+name: ex01
+on: 
+  workflow_dispatch:
+  schedule:
+      - cron: "*/5 * * * *"
+jobs:
+  author_info:
+    runs-on: ubuntu-latest
+steps:
+- name: Check out this repo
+  uses: actions/checkout@v4
